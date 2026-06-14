@@ -1,9 +1,11 @@
 "use server";
 
+type FieldKey = "company" | "industry" | "position" | "email" | "notes";
+
 export type ContactState = {
   status: "idle" | "success" | "error";
   message: string;
-  errors?: Partial<Record<"name" | "email" | "company" | "message", string>>;
+  errors?: Partial<Record<FieldKey, string>>;
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -12,15 +14,18 @@ export async function submitContact(
   _prevState: ContactState,
   formData: FormData,
 ): Promise<ContactState> {
-  const name = String(formData.get("name") ?? "").trim();
+  const company = String(formData.get("company") ?? "").trim();
+  const industry = String(formData.get("industry") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
-  const message = String(formData.get("message") ?? "").trim();
+  const shortlist = String(formData.get("shortlist") ?? "")
+    .split(",")
+    .map((r) => r.trim())
+    .filter(Boolean);
 
   const errors: ContactState["errors"] = {};
-  if (name.length < 2) errors.name = "Please enter your name.";
+  if (company.length < 2) errors.company = "Please enter your company name.";
+  if (!industry) errors.industry = "Please pick a sector.";
   if (!EMAIL_RE.test(email)) errors.email = "Please enter a valid email.";
-  if (message.length < 10)
-    errors.message = "Tell us a little more (at least 10 characters).";
 
   if (Object.keys(errors).length > 0) {
     return {
@@ -30,13 +35,20 @@ export async function submitContact(
     };
   }
 
-  // In a real app you'd send an email / persist to a CRM here.
-  // Simulate a short network round-trip so the pending state is visible.
+  // In a real app, this is where we'd push to a CRM, send an email,
+  // or persist the request. Simulate a brief round-trip so the pending
+  // state is visible in the UI.
   await new Promise((resolve) => setTimeout(resolve, 600));
+
+  const refSummary =
+    shortlist.length > 0
+      ? ` We've attached the ${shortlist.length} reference${
+          shortlist.length === 1 ? "" : "s"
+        } you shortlisted (${shortlist.map((r) => `N. ${r}`).join(", ")}).`
+      : "";
 
   return {
     status: "success",
-    message: `Thanks, ${name.split(" ")[0]}! We've received your message and will be in touch shortly.`,
+    message: `We'll be in touch within two working days with candidate introductions tailored to your needs.${refSummary}`,
   };
 }
-
