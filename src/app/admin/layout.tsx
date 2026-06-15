@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { signOutAction } from "@/app/admin/actions";
 import { getSession } from "@/lib/auth";
@@ -25,11 +26,20 @@ export default async function AdminLayout({
           <div className="flex items-center gap-8">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-display text-lg tracking-tight text-zinc-900"
+              className="inline-flex items-center gap-3 text-zinc-900"
             >
-              <span className="size-1.5 rounded-full bg-zinc-900" />
-              Aura Recruitment
-              <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400">
+              <Image
+                src="/aura-logo.png"
+                alt="Aura Consulting"
+                width={36}
+                height={36}
+                className="size-9 object-contain"
+                priority
+              />
+              <span className="font-display text-lg tracking-tight">
+                Aura Consulting
+              </span>
+              <span className="ml-1 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400">
                 / admin
               </span>
             </Link>

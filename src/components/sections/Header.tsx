@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks, siteConfig } from "@/data/site";
 
@@ -16,19 +17,33 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 py-[22px] backdrop-blur-[14px] transition-[border-color] duration-400 border-b ${
+      className={`fixed inset-x-0 top-0 z-50 py-[18px] backdrop-blur-[14px] transition-[border-color] duration-400 border-b ${
         scrolled ? "border-line" : "border-transparent"
       }`}
-      style={{ background: "rgba(19, 18, 16, 0.7)" }}
+      style={{ background: "rgba(255, 255, 255, 0.82)" }}
     >
       <div className="wrap flex items-center justify-between gap-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-2.5 font-display text-xl tracking-tight sm:text-2xl"
+          className="group inline-flex items-center gap-3"
           aria-label={`${siteConfig.fullName} — home`}
         >
-          <span className="mb-1 size-1.5 rounded-full bg-accent animate-pulse-dot" />
-          {siteConfig.fullName}
+          <Image
+            src="/aura-logo.png"
+            alt=""
+            width={40}
+            height={40}
+            className="size-10 object-contain"
+            priority
+          />
+          <span className="hidden flex-col leading-tight sm:flex">
+            <span className="font-display text-lg tracking-tight text-ink">
+              Aura
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
+              Consulting
+            </span>
+          </span>
         </Link>
 
         <nav className="flex items-center gap-9 max-[720px]:gap-[18px]">

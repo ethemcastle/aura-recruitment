@@ -7,9 +7,9 @@ import { listCategories, listPeople } from "@/lib/store";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Roster · Aura Recruitment",
+  title: "Roster · Aura Consulting",
   description:
-    "Browse Aura's full roster of vetted international workers ready to relocate to Albania.",
+    "Browse Aura Consulting's full roster of vetted international workers ready to relocate to Albania.",
 };
 
 export default async function RosterPage() {

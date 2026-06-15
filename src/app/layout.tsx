@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
-      <body className="bg-bg text-ink">
+      <body className="bg-white text-ink" suppressHydrationWarning>
         <ShortlistProvider>
           {children}
           <ShortlistDock />

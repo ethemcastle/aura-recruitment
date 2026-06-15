@@ -28,7 +28,7 @@ export function Process() {
           {processSteps.map((step, i) => (
             <article
               key={step.numeral}
-              className="reveal group relative overflow-hidden rounded-[4px] border border-line bg-bg-card px-8 pt-9 pb-10 transition-all duration-500 hover:border-line-2 hover:bg-bg-card-hover"
+              className="reveal group relative overflow-hidden rounded-[4px] border border-line bg-white px-8 pt-9 pb-10 shadow-[0_8px_24px_-16px_rgba(17,37,62,0.10)] transition-all duration-500 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_18px_36px_-20px_rgba(168,127,78,0.30)]"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               <div className="mb-12 font-display text-[56px] italic font-normal leading-none text-accent">
