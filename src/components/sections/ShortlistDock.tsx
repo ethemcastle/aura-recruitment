@@ -23,7 +23,7 @@ export function ShortlistDock() {
       <div className="h-4 w-px bg-bg/20" />
       <a
         href="#contact"
-        className="inline-flex items-center gap-2 rounded-full bg-bg px-[18px] py-2.5 text-[13px] font-medium text-ink transition-colors duration-300 hover:bg-bg-card-hover"
+        className="inline-flex items-center gap-2 rounded-full bg-white px-[18px] py-2.5 text-[13px] font-medium text-ink transition-colors duration-300 hover:bg-accent hover:text-white"
       >
         Request introductions
         <span>→</span>

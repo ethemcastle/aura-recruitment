@@ -29,10 +29,10 @@ export async function Hero() {
       {/* Decorative dot grid background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        className="pointer-events-none absolute inset-0 opacity-[0.55]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(201,168,118,0.10) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(17,37,62,0.10) 1px, transparent 1px)",
           backgroundSize: "32px 32px",
           maskImage:
             "radial-gradient(ellipse 80% 60% at 50% 40%, black 0%, transparent 75%)",
@@ -40,18 +40,34 @@ export async function Hero() {
             "radial-gradient(ellipse 80% 60% at 50% 40%, black 0%, transparent 75%)",
         }}
       />
-      {/* Soft accent glow behind the headline */}
+      {/* Three drifting auroras */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/3 size-[600px] -translate-x-1/2 rounded-full blur-[120px] opacity-30"
+        className="pointer-events-none absolute -top-24 left-1/3 size-[640px] -translate-x-1/2 rounded-full blur-[110px] opacity-55 animate-drift-a"
         style={{
           background:
-            "radial-gradient(circle, rgba(201,168,118,0.45) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(212,166,116,0.55) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-40 right-[-10%] size-[520px] rounded-full blur-[120px] opacity-35 animate-drift-b"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(17,37,62,0.20) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-20 -left-32 size-[480px] rounded-full blur-[130px] opacity-30 animate-drift-c"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(212,166,116,0.35) 0%, transparent 70%)",
         }}
       />
 
       <div className="wrap relative flex flex-1 flex-col">
-        <div className="mb-[clamp(40px,8vh,80px)] flex flex-wrap items-start justify-between gap-4">
+        <div className="mb-[clamp(32px,6vh,64px)] flex flex-wrap items-start justify-between gap-4">
           <div
             className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-ink-3 opacity-0"
             style={{
@@ -63,7 +79,7 @@ export async function Hero() {
           </div>
 
           <div
-            className="inline-flex items-center gap-2.5 rounded-full border border-line-2 bg-bg-card/60 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-2 opacity-0 backdrop-blur-sm"
+            className="inline-flex items-center gap-2.5 rounded-full border border-line-2 bg-white/60 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-2 opacity-0 backdrop-blur-sm"
             style={{
               animation: "aura-fade-in 0.9s var(--ease-aura) 0.4s forwards",
             }}
@@ -76,22 +92,22 @@ export async function Hero() {
           </div>
         </div>
 
-        <h1 className="mb-[clamp(32px,5vh,56px)] font-display text-[clamp(56px,11vw,176px)] font-normal leading-[0.92] tracking-[-0.025em] text-ink">
-          <span className="block">
-            <Word delay="0.15s">A roster</Word>{" "}
-            <Word delay="0.25s">of&nbsp;</Word>
-            <Word delay="0.35s">
-              <em className="font-display italic text-accent">people</em>,
-            </Word>
-          </span>
-          <span className="block">
-            <Word delay="0.55s">not</Word>{" "}
-            <Word delay="0.65s">profiles.</Word>
-          </span>
-        </h1>
-
-        <div className="grid items-end gap-12 pb-[clamp(40px,8vh,72px)] lg:grid-cols-[1.6fr_1fr] max-[1080px]:grid-cols-1 max-[1080px]:gap-10">
+        <div className="grid items-start gap-12 pb-[clamp(40px,8vh,72px)] lg:grid-cols-[1.6fr_1fr] max-[1080px]:grid-cols-1 max-[1080px]:gap-10">
           <div className="flex flex-col gap-8">
+            <h1 className="font-display text-[clamp(52px,8vw,128px)] font-normal leading-[0.94] tracking-[-0.025em] text-ink">
+              <span className="block">
+                <Word delay="0.15s">A roster</Word>{" "}
+                <Word delay="0.25s">of&nbsp;</Word>
+                <Word delay="0.35s">
+                  <em className="font-display italic text-accent">people</em>,
+                </Word>
+              </span>
+              <span className="block">
+                <Word delay="0.55s">not</Word>{" "}
+                <Word delay="0.65s">profiles.</Word>
+              </span>
+            </h1>
+
             <p
               className="max-w-[560px] text-[clamp(15px,1.4vw,18px)] leading-[1.55] text-ink-2 opacity-0"
               style={{
@@ -111,7 +127,7 @@ export async function Hero() {
             >
               <Link
                 href="/roster"
-                className="group inline-flex items-center gap-2.5 rounded-full border border-transparent bg-ink px-[26px] py-4 text-sm font-medium text-bg transition-all duration-300 hover:-translate-y-px hover:bg-accent"
+                className="group inline-flex items-center gap-2.5 rounded-full border border-transparent bg-ink px-[26px] py-4 text-sm font-medium text-paper shadow-[0_14px_28px_-14px_rgba(17,37,62,0.45)] transition-all duration-300 hover:-translate-y-px hover:bg-accent hover:shadow-[0_18px_36px_-14px_rgba(177,134,79,0.55)]"
               >
                 Browse the roster
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -120,7 +136,7 @@ export async function Hero() {
               </Link>
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-2.5 rounded-full border border-line-2 px-[26px] py-4 text-sm font-medium text-ink transition-all duration-300 hover:border-ink hover:bg-white/[0.03]"
+                className="inline-flex items-center gap-2.5 rounded-full border border-line-2 px-[26px] py-4 text-sm font-medium text-ink transition-all duration-300 hover:border-ink hover:bg-white"
               >
                 Speak with us
               </Link>
@@ -138,7 +154,9 @@ export async function Hero() {
             </dl>
           </div>
 
-          <HeroFeatured candidates={featured} />
+          <div className="lg:pt-12">
+            <HeroFeatured candidates={featured} />
+          </div>
         </div>
       </div>
 

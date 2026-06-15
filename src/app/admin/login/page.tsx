@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
 import { LoginForm } from "@/components/admin/LoginForm";
@@ -13,13 +14,21 @@ export default async function AdminLoginPage() {
   const hasCustomPassword = Boolean(process.env.ADMIN_PASSWORD);
 
   return (
-    <div className="mx-auto flex max-w-md flex-col gap-8 py-10">
-      <div>
-        <div className="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-zinc-400">
-          Aura Recruitment / Admin
+    <div className="mx-auto flex max-w-md flex-col items-stretch gap-8 py-10">
+      <div className="flex flex-col items-center gap-4 text-center">
+        <Image
+          src="/aura-logo.png"
+          alt="Aura Consulting"
+          width={120}
+          height={120}
+          className="size-24 object-contain"
+          priority
+        />
+        <div className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-400">
+          Aura Consulting / Admin
         </div>
         <h1 className="font-display text-3xl tracking-tight">Sign in</h1>
-        <p className="mt-2 text-sm text-zinc-500">
+        <p className="max-w-xs text-sm text-zinc-500">
           Authorised staff only. Enter the admin password to manage the
           roster and categories.
         </p>

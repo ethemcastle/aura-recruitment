@@ -58,8 +58,10 @@ export function RosterGrid({
           return (
             <article
               key={c.ref}
-              className={`reveal relative flex cursor-pointer flex-col px-[22px] pt-[22px] pb-[26px] transition-colors duration-400 ${
-                shortlisted ? "bg-bg-card-hover" : "bg-bg-card hover:bg-bg-card-hover"
+              className={`reveal group/card relative flex cursor-pointer flex-col px-[22px] pt-[22px] pb-[26px] transition-all duration-400 ${
+                shortlisted
+                  ? "bg-bg-card-hover"
+                  : "bg-bg-card hover:bg-bg-card-hover hover:shadow-[inset_0_-2px_0_var(--color-accent)]"
               }`}
               style={{ transitionDelay: `${i * 0.05}s` }}
             >
@@ -79,12 +81,12 @@ export function RosterGrid({
                 className="group relative mb-6 flex aspect-[1/1.05] items-center justify-center overflow-hidden border border-line"
                 style={{
                   background:
-                    "linear-gradient(135deg, #1F1D19 0%, #181612 100%)",
+                    "#ffffff",
                 }}
               >
                 <span
                   className="absolute top-3 right-3 flex size-[22px] items-center justify-center rounded-full text-[11px] text-accent"
-                  style={{ background: "rgba(201,168,118,0.12)" }}
+                  style={{ background: "rgba(201,163,120,0.12)" }}
                   title="Verified"
                 >
                   ✓
@@ -94,7 +96,7 @@ export function RosterGrid({
                   className="pointer-events-none absolute inset-0"
                   style={{
                     background:
-                      "radial-gradient(circle at 30% 25%, rgba(201,168,118,0.06) 0%, transparent 60%)",
+                      "radial-gradient(circle at 30% 25%, rgba(201,163,120,0.06) 0%, transparent 60%)",
                   }}
                 />
                 {c.photoUrl ? (

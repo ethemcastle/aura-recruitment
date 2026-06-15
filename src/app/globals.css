@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #131210;
-  --color-bg-elev: #1a1916;
-  --color-bg-card: #1c1b17;
-  --color-bg-card-hover: #211f1b;
+  /* White-paper editorial theme drawn from the Aura Consulting
+     wordmark: pure white surface, deep-navy ink, warm champagne gold
+     for accents, plus sand/tint tokens for sectional colour rhythm. */
+  --color-bg: #ffffff;
+  --color-bg-elev: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #ffffff;
 
-  --color-ink: #edeae1;
-  --color-ink-2: #b5b0a6;
-  --color-ink-3: #767168;
-  --color-ink-4: #4a4740;
+  --color-ink: #11253e;
+  --color-ink-2: #475266;
+  --color-ink-3: #7a8395;
+  --color-ink-4: #c2c7d0;
 
-  --color-line: #2a2823;
-  --color-line-2: #3a382f;
+  --color-line: #ece7da;
+  --color-line-2: #d8d1bc;
 
-  --color-accent: #c9a876;
-  --color-accent-dim: #8a7556;
+  --color-accent: #b1864f;
+  --color-accent-dim: #82613a;
+  --color-accent-bright: #d4a674;
+
+  --color-sand: #fbf6e7;
+  --color-tint: #f7ecce;
+  --color-paper: #ffffff;
 
   --font-display: var(--font-instrument-serif), "Times New Roman", serif;
   --font-sans: var(--font-inter-tight), system-ui, -apple-system, sans-serif;
@@ -27,6 +35,12 @@
   --animate-marquee: marquee 60s linear infinite;
   --animate-pulse-dot: pulse-dot 3s ease-in-out infinite;
   --animate-reveal-up: reveal-up 1s var(--ease-aura-out) forwards;
+  --animate-drift-a: drift-a 18s ease-in-out infinite;
+  --animate-drift-b: drift-b 24s ease-in-out infinite;
+  --animate-drift-c: drift-c 30s ease-in-out infinite;
+  --animate-pulse-node: pulse-node 2.6s ease-in-out infinite;
+  --animate-dash-flow: dash-flow 4s linear infinite;
+  --animate-shimmer: shimmer 6s linear infinite;
 }
 
 @keyframes marquee {
@@ -42,6 +56,34 @@
 }
 @keyframes aura-fade-in {
   to { opacity: 1; }
+}
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -22px) scale(1.08); }
+}
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-36px, 18px) scale(1.05); }
+}
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  50% { transform: translate(20px, 30px) scale(1.1); }
+}
+@keyframes pulse-node {
+  0%, 100% { transform: scale(1); opacity: 0.45; }
+  50% { transform: scale(1.6); opacity: 0; }
+}
+@keyframes dash-flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -36; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes accordion-down {
+  from { grid-template-rows: 0fr; }
+  to { grid-template-rows: 1fr; }
 }
 
 html {
@@ -70,10 +112,10 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.05;
   z-index: 100;
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
 }
 
 ::selection {

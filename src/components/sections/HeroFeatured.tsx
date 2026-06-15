@@ -28,12 +28,21 @@ export function HeroFeatured({ candidates }: { candidates: Candidate[] }) {
       </div>
 
       <article
-        className="relative overflow-hidden rounded-[4px] border border-line bg-bg-card px-[22px] pt-[22px] pb-[26px]"
+        className="relative overflow-hidden rounded-[6px] border border-accent/40 bg-white px-[22px] pt-[22px] pb-[26px]"
         style={{
           boxShadow:
-            "0 30px 80px -30px rgba(0,0,0,0.6), 0 8px 32px -16px rgba(201,168,118,0.15)",
+            "0 30px 80px -40px rgba(17,37,62,0.20), 0 10px 28px -14px rgba(177,134,79,0.32)",
         }}
       >
+        {/* Gold accent ribbon along the top edge */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-[3px]"
+          style={{
+            background:
+              "linear-gradient(90deg, #d4a674 0%, #b1864f 50%, #d4a674 100%)",
+          }}
+        />
         <header className="mb-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-ink-3">
           <span>N. {c.ref}</span>
           <span>{c.countryCode}</span>
@@ -42,12 +51,12 @@ export function HeroFeatured({ candidates }: { candidates: Candidate[] }) {
         <div
           className="relative mb-6 flex aspect-[1/1.05] items-center justify-center overflow-hidden border border-line"
           style={{
-            background: "linear-gradient(135deg, #1F1D19 0%, #181612 100%)",
+            background: "#ffffff",
           }}
         >
           <span
             className="absolute top-3 right-3 flex size-[22px] items-center justify-center rounded-full text-[11px] text-accent"
-            style={{ background: "rgba(201,168,118,0.12)" }}
+            style={{ background: "rgba(201,163,120,0.12)" }}
           >
             ✓
           </span>
@@ -56,7 +65,7 @@ export function HeroFeatured({ candidates }: { candidates: Candidate[] }) {
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at 30% 25%, rgba(201,168,118,0.08) 0%, transparent 60%)",
+                "radial-gradient(circle at 30% 25%, rgba(201,163,120,0.08) 0%, transparent 60%)",
             }}
           />
           {c.photoUrl ? (

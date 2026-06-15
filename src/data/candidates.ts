@@ -11,6 +11,7 @@ export const candidates: Candidate[] = [
     experience: "12 yrs",
     languages: "EN · NE · HI",
     category: "construction",
+    photoUrl: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     ref: "048",
@@ -22,6 +23,7 @@ export const candidates: Candidate[] = [
     experience: "8 yrs",
     languages: "EN · HI",
     category: "hospitality",
+    photoUrl: "https://randomuser.me/api/portraits/women/68.jpg",
   },
   {
     ref: "049",
@@ -33,6 +35,7 @@ export const candidates: Candidate[] = [
     experience: "6 yrs",
     languages: "EN · TL",
     category: "care",
+    photoUrl: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
     ref: "050",
@@ -44,6 +47,7 @@ export const candidates: Candidate[] = [
     experience: "7 yrs",
     languages: "EN · BN",
     category: "manufacturing",
+    photoUrl: "https://randomuser.me/api/portraits/women/27.jpg",
   },
   {
     ref: "051",
@@ -55,6 +59,7 @@ export const candidates: Candidate[] = [
     experience: "10 yrs",
     languages: "EN · AR",
     category: "trades",
+    photoUrl: "https://randomuser.me/api/portraits/men/52.jpg",
   },
   {
     ref: "052",
@@ -66,6 +71,7 @@ export const candidates: Candidate[] = [
     experience: "11 yrs",
     languages: "EN · NE",
     category: "trades",
+    photoUrl: "https://randomuser.me/api/portraits/men/15.jpg",
   },
   {
     ref: "053",
@@ -77,6 +83,7 @@ export const candidates: Candidate[] = [
     experience: "5 yrs",
     languages: "EN · HI",
     category: "hospitality",
+    photoUrl: "https://randomuser.me/api/portraits/women/82.jpg",
   },
   {
     ref: "054",
@@ -88,6 +95,7 @@ export const candidates: Candidate[] = [
     experience: "9 yrs",
     languages: "EN · ES",
     category: "hospitality",
+    photoUrl: "https://randomuser.me/api/portraits/men/77.jpg",
   },
 ];
 

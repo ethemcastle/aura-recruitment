@@ -5,7 +5,7 @@ export function Sectors() {
   return (
     <section
       id="sectors"
-      className="border-b border-line py-[clamp(80px,14vh,160px)] text-left"
+      className="relative border-b border-line py-[clamp(80px,14vh,160px)] text-left"
     >
       <div className="wrap">
         <SectionHead

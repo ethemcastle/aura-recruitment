@@ -199,7 +199,7 @@ export function Contact() {
             {state.status === "success" && (
               <div
                 className="mt-6 rounded-[4px] border border-accent-dim px-[22px] py-[18px] text-sm text-ink"
-                style={{ background: "rgba(201,168,118,0.08)" }}
+                style={{ background: "rgba(201,163,120,0.08)" }}
                 role="status"
               >
                 <strong className="font-medium text-accent">
