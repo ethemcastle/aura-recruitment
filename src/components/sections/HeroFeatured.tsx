@@ -78,6 +78,7 @@ export function HeroFeatured({ candidates }: { candidates: Candidate[] }) {
               style={{
                 animation: "aura-fade-in 0.6s var(--ease-aura) forwards",
                 opacity: 0,
+                objectPosition: "50% 25%",
               }}
             />
           ) : (

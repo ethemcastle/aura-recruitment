@@ -104,7 +104,9 @@ export function RosterGrid({
                   <img
                     src={c.photoUrl}
                     alt={c.name}
+                    loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    style={{ objectPosition: "50% 25%" }}
                   />
                 ) : (
                   <span className="font-display text-[clamp(96px,14vw,144px)] italic font-normal leading-none tracking-[-0.03em] transition-all duration-500 group-hover:scale-[1.03] group-hover:text-accent">

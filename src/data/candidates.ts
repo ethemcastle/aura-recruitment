@@ -11,7 +11,7 @@ export const candidates: Candidate[] = [
     experience: "12 yrs",
     languages: "EN · NE · HI",
     category: "construction",
-    photoUrl: "https://randomuser.me/api/portraits/men/32.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=11",
   },
   {
     ref: "048",
@@ -23,7 +23,7 @@ export const candidates: Candidate[] = [
     experience: "8 yrs",
     languages: "EN · HI",
     category: "hospitality",
-    photoUrl: "https://randomuser.me/api/portraits/women/68.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=5",
   },
   {
     ref: "049",
@@ -35,7 +35,7 @@ export const candidates: Candidate[] = [
     experience: "6 yrs",
     languages: "EN · TL",
     category: "care",
-    photoUrl: "https://randomuser.me/api/portraits/women/45.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=10",
   },
   {
     ref: "050",
@@ -47,7 +47,7 @@ export const candidates: Candidate[] = [
     experience: "7 yrs",
     languages: "EN · BN",
     category: "manufacturing",
-    photoUrl: "https://randomuser.me/api/portraits/women/27.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=16",
   },
   {
     ref: "051",
@@ -59,7 +59,7 @@ export const candidates: Candidate[] = [
     experience: "10 yrs",
     languages: "EN · AR",
     category: "trades",
-    photoUrl: "https://randomuser.me/api/portraits/men/52.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=13",
   },
   {
     ref: "052",
@@ -71,7 +71,7 @@ export const candidates: Candidate[] = [
     experience: "11 yrs",
     languages: "EN · NE",
     category: "trades",
-    photoUrl: "https://randomuser.me/api/portraits/men/15.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=33",
   },
   {
     ref: "053",
@@ -83,7 +83,7 @@ export const candidates: Candidate[] = [
     experience: "5 yrs",
     languages: "EN · HI",
     category: "hospitality",
-    photoUrl: "https://randomuser.me/api/portraits/women/82.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=47",
   },
   {
     ref: "054",
@@ -95,7 +95,7 @@ export const candidates: Candidate[] = [
     experience: "9 yrs",
     languages: "EN · ES",
     category: "hospitality",
-    photoUrl: "https://randomuser.me/api/portraits/men/77.jpg",
+    photoUrl: "https://i.pravatar.cc/600?img=12",
   },
 ];
 
